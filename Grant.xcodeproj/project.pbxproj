@@ -12,6 +12,7 @@
 		73921050217F119A00DFC13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7392104E217F119A00DFC13C /* Main.storyboard */; };
 		73921052217F119B00DFC13C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73921051217F119B00DFC13C /* Assets.xcassets */; };
 		73921055217F119B00DFC13C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73921053217F119B00DFC13C /* LaunchScreen.storyboard */; };
+		7929EA26BCC470F4AD64182F /* Pods_Grant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D7881F9A97154405721D7 /* Pods_Grant.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		73921051217F119B00DFC13C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73921054217F119B00DFC13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73921056217F119B00DFC13C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7B8A1A4EB96201679C23E8 /* Pods-Grant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grant.release.xcconfig"; path = "Target Support Files/Pods-Grant/Pods-Grant.release.xcconfig"; sourceTree = "<group>"; };
+		CDAEF1C8FE09E903F18D0457 /* Pods-Grant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grant.debug.xcconfig"; path = "Target Support Files/Pods-Grant/Pods-Grant.debug.xcconfig"; sourceTree = "<group>"; };
+		D03D7881F9A97154405721D7 /* Pods_Grant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7929EA26BCC470F4AD64182F /* Pods_Grant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43FC97935774D26FEBA29E86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDAEF1C8FE09E903F18D0457 /* Pods-Grant.debug.xcconfig */,
+				BF7B8A1A4EB96201679C23E8 /* Pods-Grant.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		526D47AAC802C3E1890DA6BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D03D7881F9A97154405721D7 /* Pods_Grant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7392103E217F119A00DFC13C = {
 			isa = PBXGroup;
 			children = (
 				73921049217F119A00DFC13C /* Grant */,
 				73921048217F119A00DFC13C /* Products */,
+				43FC97935774D26FEBA29E86 /* Pods */,
+				526D47AAC802C3E1890DA6BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73921059217F119B00DFC13C /* Build configuration list for PBXNativeTarget "Grant" */;
 			buildPhases = (
+				116034380ABF9798858BD7DD /* [CP] Check Pods Manifest.lock */,
 				73921043217F119A00DFC13C /* Sources */,
 				73921044217F119A00DFC13C /* Frameworks */,
 				73921045217F119A00DFC13C /* Resources */,
+				448AABD6F04739D03A87800C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		116034380ABF9798858BD7DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Grant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		448AABD6F04739D03A87800C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Grant/Pods-Grant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Grant/Pods-Grant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		73921043217F119A00DFC13C /* Sources */ = {
@@ -280,6 +354,7 @@
 		};
 		7392105A217F119B00DFC13C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDAEF1C8FE09E903F18D0457 /* Pods-Grant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +373,7 @@
 		};
 		7392105B217F119B00DFC13C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF7B8A1A4EB96201679C23E8 /* Pods-Grant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
