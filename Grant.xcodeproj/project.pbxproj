@@ -79,6 +79,23 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		7330DE052180833300F86D72 /* working */ = {
+			isa = PBXGroup;
+			children = (
+				7330DE03218081B400F86D72 /* working.swift */,
+				7330DE012180815100F86D72 /* addJob.swift */,
+			);
+			path = working;
+			sourceTree = "<group>";
+		};
+		7330DE062180835D00F86D72 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				7330DDFF2180812D00F86D72 /* searchJob.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
 		7392103E217F119A00DFC13C = {
 			isa = PBXGroup;
 			children = (
@@ -103,13 +120,12 @@
 				7392104A217F119A00DFC13C /* AppDelegate.swift */,
 				7392104C217F119A00DFC13C /* ViewController.swift */,
 				7392104E217F119A00DFC13C /* Main.storyboard */,
-				7330DE03218081B400F86D72 /* working.swift */,
-				7330DE012180815100F86D72 /* addJob.swift */,
-				7330DDFF2180812D00F86D72 /* searchJob.swift */,
+				7330DDF821807FB500F86D72 /* images */,
+				7330DE052180833300F86D72 /* working */,
+				7330DE062180835D00F86D72 /* search */,
 				73921051217F119B00DFC13C /* Assets.xcassets */,
 				73921053217F119B00DFC13C /* LaunchScreen.storyboard */,
 				73921056217F119B00DFC13C /* Info.plist */,
-				7330DDF821807FB500F86D72 /* images */,
 			);
 			path = Grant;
 			sourceTree = "<group>";
