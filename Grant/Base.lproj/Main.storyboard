@@ -44,7 +44,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="アカウント" id="WGZ-Ss-uCt"/>
+                    <tabBarItem key="tabBarItem" title="アカウント" image="acount.png" id="WGZ-Ss-uCt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +53,7 @@
         <!--お仕事中-->
         <scene sceneID="E55-6Y-JfN">
             <objects>
-                <viewController id="9fn-HR-LXd" sceneMemberID="viewController">
+                <viewController id="9fn-HR-LXd" customClass="working" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yui-j1-Y5I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,25 +84,31 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mWD-AR-TnN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="お仕事中" id="O1r-u6-aUx"/>
+                    <tabBarItem key="tabBarItem" title="お仕事中" image="job.png" id="O1r-u6-aUx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v28-dD-tzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.6" y="21.139430284857571"/>
+            <point key="canvasLocation" x="1022" y="37"/>
         </scene>
         <!--お仕事を探す-->
         <scene sceneID="2CH-Xh-qsj">
             <objects>
-                <viewController id="edm-mH-GRa" sceneMemberID="viewController">
+                <viewController id="edm-mH-GRa" customClass="searchJob" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nWK-QZ-D6n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBe-xd-78c">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="27" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="お仕事を探す" id="FpF-Vh-R3i"/>
+                                    <navigationItem title="お仕事を探す" id="FpF-Vh-R3i">
+                                        <barButtonItem key="rightBarButtonItem" title="お仕事依頼" id="oll-ht-gh8">
+                                            <connections>
+                                                <segue destination="XJz-zh-FGj" kind="show" id="F9O-es-ptj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UJ0-Rr-dwE">
@@ -110,7 +116,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="新着"/>
-                                    <segment title="内容で探す"/>
+                                    <segment title="カテゴリで探す"/>
                                     <segment title="場所で探す"/>
                                 </segments>
                             </segmentedControl>
@@ -133,11 +139,46 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="beY-6d-gTL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="お仕事を探す" id="RYj-o9-iYA"/>
+                    <tabBarItem key="tabBarItem" title="お仕事を探す" image="search.png" id="RYj-o9-iYA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbK-O2-frM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.6" y="-642.72863568215894"/>
+        </scene>
+        <!--Add Job-->
+        <scene sceneID="rFd-Pj-Ibr">
+            <objects>
+                <viewController id="XJz-zh-FGj" customClass="addJob" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z4e-Yy-r4w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VhK-qq-nTk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="お仕事依頼" id="G7X-dc-L58">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="t5g-wX-swa">
+                                            <connections>
+                                                <action selector="cancelBtn:" destination="XJz-zh-FGj" id="Lw1-Gl-Gqo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PSW-ig-xwB">
+                                            <connections>
+                                                <action selector="addJobDone:" destination="XJz-zh-FGj" id="pm5-xY-2yJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="E4G-pD-hAw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUU-xg-x8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="-643"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="joh-fP-bt7">
@@ -149,8 +190,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="edm-mH-GRa" kind="relationship" relationship="viewControllers" id="LH9-go-Nvu"/>
                         <segue destination="9fn-HR-LXd" kind="relationship" relationship="viewControllers" id="YK9-cT-Do9"/>
+                        <segue destination="edm-mH-GRa" kind="relationship" relationship="viewControllers" id="LH9-go-Nvu"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="c2V-gk-TKh"/>
                     </connections>
                 </tabBarController>
@@ -159,4 +200,9 @@
             <point key="canvasLocation" x="70" y="-310"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="acount.png" width="32" height="32"/>
+        <image name="job.png" width="32" height="32"/>
+        <image name="search.png" width="32" height="32"/>
+    </resources>
 </document>

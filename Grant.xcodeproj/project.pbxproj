@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7330DDFB21807FC800F86D72 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDF921807FC800F86D72 /* search.png */; };
+		7330DDFC21807FC800F86D72 /* acount.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDFA21807FC800F86D72 /* acount.png */; };
+		7330DDFE21807FD000F86D72 /* job.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDFD21807FD000F86D72 /* job.png */; };
+		7330DE002180812D00F86D72 /* searchJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7330DDFF2180812D00F86D72 /* searchJob.swift */; };
+		7330DE022180815100F86D72 /* addJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7330DE012180815100F86D72 /* addJob.swift */; };
+		7330DE04218081B400F86D72 /* working.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7330DE03218081B400F86D72 /* working.swift */; };
 		7392104B217F119A00DFC13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392104A217F119A00DFC13C /* AppDelegate.swift */; };
 		7392104D217F119A00DFC13C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392104C217F119A00DFC13C /* ViewController.swift */; };
 		73921050217F119A00DFC13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7392104E217F119A00DFC13C /* Main.storyboard */; };
@@ -16,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7330DDF921807FC800F86D72 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		7330DDFA21807FC800F86D72 /* acount.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acount.png; sourceTree = "<group>"; };
+		7330DDFD21807FD000F86D72 /* job.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = job.png; sourceTree = "<group>"; };
+		7330DDFF2180812D00F86D72 /* searchJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchJob.swift; sourceTree = "<group>"; };
+		7330DE012180815100F86D72 /* addJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addJob.swift; sourceTree = "<group>"; };
+		7330DE03218081B400F86D72 /* working.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = working.swift; sourceTree = "<group>"; };
 		73921047217F119A00DFC13C /* Grant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7392104A217F119A00DFC13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7392104C217F119A00DFC13C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +58,6 @@
 				CDAEF1C8FE09E903F18D0457 /* Pods-Grant.debug.xcconfig */,
 				BF7B8A1A4EB96201679C23E8 /* Pods-Grant.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -56,6 +67,16 @@
 				D03D7881F9A97154405721D7 /* Pods_Grant.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7330DDF821807FB500F86D72 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7330DDFD21807FD000F86D72 /* job.png */,
+				7330DDFA21807FC800F86D72 /* acount.png */,
+				7330DDF921807FC800F86D72 /* search.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		7392103E217F119A00DFC13C = {
@@ -82,9 +103,13 @@
 				7392104A217F119A00DFC13C /* AppDelegate.swift */,
 				7392104C217F119A00DFC13C /* ViewController.swift */,
 				7392104E217F119A00DFC13C /* Main.storyboard */,
+				7330DE03218081B400F86D72 /* working.swift */,
+				7330DE012180815100F86D72 /* addJob.swift */,
+				7330DDFF2180812D00F86D72 /* searchJob.swift */,
 				73921051217F119B00DFC13C /* Assets.xcassets */,
 				73921053217F119B00DFC13C /* LaunchScreen.storyboard */,
 				73921056217F119B00DFC13C /* Info.plist */,
+				7330DDF821807FB500F86D72 /* images */,
 			);
 			path = Grant;
 			sourceTree = "<group>";
@@ -151,6 +176,9 @@
 			files = (
 				73921055217F119B00DFC13C /* LaunchScreen.storyboard in Resources */,
 				73921052217F119B00DFC13C /* Assets.xcassets in Resources */,
+				7330DDFC21807FC800F86D72 /* acount.png in Resources */,
+				7330DDFE21807FD000F86D72 /* job.png in Resources */,
+				7330DDFB21807FC800F86D72 /* search.png in Resources */,
 				73921050217F119A00DFC13C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,8 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7330DE002180812D00F86D72 /* searchJob.swift in Sources */,
 				7392104D217F119A00DFC13C /* ViewController.swift in Sources */,
 				7392104B217F119A00DFC13C /* AppDelegate.swift in Sources */,
+				7330DE04218081B400F86D72 /* working.swift in Sources */,
+				7330DE022180815100F86D72 /* addJob.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
