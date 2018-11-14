@@ -7,6 +7,6 @@ target 'Grant' do
 
   # Pods for Grant
   
-  pod 'Realm'
+  pod 'RealmSwift'
 
 end

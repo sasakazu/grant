@@ -1,55 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xnt-da-znH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xnt-da-znH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--アカウント-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UQI-7f-Em6">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="アカウント" id="YY5-D1-s1I"/>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zi6-aF-nXG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="OoA-gD-4tC">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OoA-gD-4tC" id="UOF-v6-8gK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="アカウント" image="acount.png" id="WGZ-Ss-uCt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="481.70914542728639"/>
-        </scene>
         <!--お仕事中-->
         <scene sceneID="E55-6Y-JfN">
             <objects>
@@ -84,13 +43,50 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mWD-AR-TnN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="お仕事中" image="job.png" id="O1r-u6-aUx"/>
+                    <navigationItem key="navigationItem" title="お仕事中" id="KcH-41-MaP"/>
+                    <connections>
+                        <segue destination="cCc-4I-UZn" kind="show" id="dOx-hp-dgx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v28-dD-tzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="37"/>
+            <point key="canvasLocation" x="1801" y="36"/>
         </scene>
-        <!--お仕事を探す-->
+        <!--View Controller-->
+        <scene sceneID="Gk9-uO-svG">
+            <objects>
+                <viewController id="cCc-4I-UZn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4nh-Et-Xqy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xsx-eF-MKo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igM-Ec-mS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="36"/>
+        </scene>
+        <!--お仕事依頼-->
+        <scene sceneID="kUQ-vl-TEd">
+            <objects>
+                <viewController id="QVC-Xd-NyF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xkw-n9-WOp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ofI-M9-EdL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="お仕事依頼" id="zue-5x-NRm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PxO-0U-nrn"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yns-go-mQb"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQ3-XS-0rc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1801" y="754"/>
+        </scene>
+        <!--仕事を探す-->
         <scene sceneID="2CH-Xh-qsj">
             <objects>
                 <viewController id="edm-mH-GRa" customClass="searchJob" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,19 +94,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBe-xd-78c">
-                                <rect key="frame" x="0.0" y="27" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="お仕事を探す" id="FpF-Vh-R3i">
-                                        <barButtonItem key="rightBarButtonItem" title="お仕事依頼" id="oll-ht-gh8">
-                                            <connections>
-                                                <segue destination="XJz-zh-FGj" kind="show" id="F9O-es-ptj"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UJ0-Rr-dwE">
                                 <rect key="frame" x="16" y="96" width="343" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -139,11 +122,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="beY-6d-gTL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="お仕事を探す" image="search.png" id="RYj-o9-iYA"/>
+                    <navigationItem key="navigationItem" title="仕事を探す" id="pQx-ih-KZs"/>
+                    <connections>
+                        <segue destination="XJz-zh-FGj" kind="show" id="RZf-I0-hiG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbK-O2-frM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.6" y="-642.72863568215894"/>
+            <point key="canvasLocation" x="1802" y="-644"/>
         </scene>
         <!--Add Job-->
         <scene sceneID="rFd-Pj-Ibr">
@@ -152,33 +138,13 @@
                     <view key="view" contentMode="scaleToFill" id="z4e-Yy-r4w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VhK-qq-nTk">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="お仕事依頼" id="G7X-dc-L58">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="t5g-wX-swa">
-                                            <connections>
-                                                <action selector="cancelBtn:" destination="XJz-zh-FGj" id="Lw1-Gl-Gqo"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PSW-ig-xwB">
-                                            <connections>
-                                                <action selector="addJobDone:" destination="XJz-zh-FGj" id="pm5-xY-2yJ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="E4G-pD-hAw"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUU-xg-x8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="-643"/>
+            <point key="canvasLocation" x="2577" y="-643"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="joh-fP-bt7">
@@ -190,18 +156,196 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9fn-HR-LXd" kind="relationship" relationship="viewControllers" id="YK9-cT-Do9"/>
-                        <segue destination="edm-mH-GRa" kind="relationship" relationship="viewControllers" id="LH9-go-Nvu"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="c2V-gk-TKh"/>
+                        <segue destination="yx1-hp-JBG" kind="relationship" relationship="viewControllers" id="YK9-cT-Do9"/>
+                        <segue destination="99Z-bf-REl" kind="relationship" relationship="viewControllers" id="LH9-go-Nvu"/>
+                        <segue destination="1k4-J6-zwU" kind="relationship" relationship="viewControllers" id="E8I-dX-npX"/>
+                        <segue destination="uRU-aH-4mD" kind="relationship" relationship="viewControllers" id="c2V-gk-TKh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOq-8n-dvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="70" y="-310"/>
         </scene>
+        <!--お仕事を探す-->
+        <scene sceneID="K5D-Ro-KT2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="99Z-bf-REl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="お仕事を探す" image="search.png" id="RYj-o9-iYA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gII-ny-xhi">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="edm-mH-GRa" kind="relationship" relationship="rootViewController" id="VG5-Sr-O4l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QiY-BT-sr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.6" y="-642.72863568215894"/>
+        </scene>
+        <!--お仕事中-->
+        <scene sceneID="clo-5K-NaT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yx1-hp-JBG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="お仕事中" image="job.png" id="O1r-u6-aUx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LIm-cZ-r7D">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9fn-HR-LXd" kind="relationship" relationship="rootViewController" id="gvc-av-42B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXE-Ua-URf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YbI-jB-QXi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uRU-aH-4mD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="WGZ-Ss-uCt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UzR-Cd-WcB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qbd-om-8Te" kind="relationship" relationship="rootViewController" id="3lN-ph-y9Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SiP-G3-5Pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="481.70914542728639"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ePA-Zy-ebt">
+            <objects>
+                <tableViewController id="SGr-nh-bwY" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gqx-FK-bUH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="h4b-n9-i4o">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0sD-RU-CYi">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0sD-RU-CYi" id="DyO-Y6-HhM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grand.png" translatesAutoresizingMaskIntoConstraints="NO" id="qdg-fr-Z2a">
+                                                    <rect key="frame" x="16" y="6" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grantとは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-Xe-FNX">
+                                                    <rect key="frame" x="54" y="11" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="FwY-zu-Zqw" kind="show" id="ABJ-zj-vM2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="z60-sN-mxf">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z60-sN-mxf" id="W6A-EF-aFq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EY7-F4-DUf">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EY7-F4-DUf" id="sbT-IY-3pD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="SGr-nh-bwY" id="V4N-vt-dbP"/>
+                            <outlet property="delegate" destination="SGr-nh-bwY" id="SDa-SR-Q2H"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="0UU-jl-AdL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCI-JU-hYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.8" y="1448.7256371814094"/>
+        </scene>
+        <!--Grantとは？-->
+        <scene sceneID="aZB-Md-exN">
+            <objects>
+                <viewController id="FwY-zu-Zqw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUb-WD-rEB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bhi-ta-Db7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grantとは？" id="v3L-Db-vqo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jF5-m9-IXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1801" y="1449"/>
+        </scene>
+        <!--お仕事依頼-->
+        <scene sceneID="h2N-lp-HK5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1k4-J6-zwU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="お仕事依頼" image="hummer.png" id="Vgu-VU-iBl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="74A-QX-yv5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QVC-Xd-NyF" kind="relationship" relationship="rootViewController" id="HLF-Yb-uah"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGm-Jw-Qz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="754"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EF9-fs-9uB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qbd-om-8Te" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="EeX-3f-ktQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5dV-GV-tgo">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SGr-nh-bwY" kind="relationship" relationship="rootViewController" id="8WM-Ay-CFp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhC-us-OlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="1448.7256371814094"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="acount.png" width="32" height="32"/>
+        <image name="grand.png" width="32" height="32"/>
+        <image name="hummer.png" width="32" height="32"/>
         <image name="job.png" width="32" height="32"/>
         <image name="search.png" width="32" height="32"/>
     </resources>

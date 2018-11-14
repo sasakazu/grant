@@ -13,6 +13,8 @@
 		7330DE002180812D00F86D72 /* searchJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7330DDFF2180812D00F86D72 /* searchJob.swift */; };
 		7330DE022180815100F86D72 /* addJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7330DE012180815100F86D72 /* addJob.swift */; };
 		7330DE04218081B400F86D72 /* working.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7330DE03218081B400F86D72 /* working.swift */; };
+		735C50F3219C3599003D7758 /* hummer.png in Resources */ = {isa = PBXBuildFile; fileRef = 735C50F1219C3599003D7758 /* hummer.png */; };
+		735C50F4219C3599003D7758 /* grand.png in Resources */ = {isa = PBXBuildFile; fileRef = 735C50F2219C3599003D7758 /* grand.png */; };
 		7392104B217F119A00DFC13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392104A217F119A00DFC13C /* AppDelegate.swift */; };
 		7392104D217F119A00DFC13C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392104C217F119A00DFC13C /* ViewController.swift */; };
 		73921050217F119A00DFC13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7392104E217F119A00DFC13C /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		7330DDFF2180812D00F86D72 /* searchJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchJob.swift; sourceTree = "<group>"; };
 		7330DE012180815100F86D72 /* addJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addJob.swift; sourceTree = "<group>"; };
 		7330DE03218081B400F86D72 /* working.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = working.swift; sourceTree = "<group>"; };
+		735C50F1219C3599003D7758 /* hummer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hummer.png; path = ../../../../../Downloads/hummer.png; sourceTree = "<group>"; };
+		735C50F2219C3599003D7758 /* grand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grand.png; path = ../../../../../Downloads/grand.png; sourceTree = "<group>"; };
 		73921047217F119A00DFC13C /* Grant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7392104A217F119A00DFC13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7392104C217F119A00DFC13C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				7330DDFD21807FD000F86D72 /* job.png */,
+				735C50F2219C3599003D7758 /* grand.png */,
+				735C50F1219C3599003D7758 /* hummer.png */,
 				7330DDFA21807FC800F86D72 /* acount.png */,
 				7330DDF921807FC800F86D72 /* search.png */,
 			);
@@ -190,8 +196,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735C50F4219C3599003D7758 /* grand.png in Resources */,
 				73921055217F119B00DFC13C /* LaunchScreen.storyboard in Resources */,
 				73921052217F119B00DFC13C /* Assets.xcassets in Resources */,
+				735C50F3219C3599003D7758 /* hummer.png in Resources */,
 				7330DDFC21807FC800F86D72 /* acount.png in Resources */,
 				7330DDFE21807FD000F86D72 /* job.png in Resources */,
 				7330DDFB21807FC800F86D72 /* search.png in Resources */,
@@ -234,12 +242,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Grant/Pods-Grant-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
