@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import RealmSwift
 
 class addJob: UIViewController {
+    
+    @IBOutlet weak var jobOfferTitle: UITextField!
+    @IBOutlet weak var priceTF: UITextField!
+    @IBOutlet weak var placeLabel: UILabel!
+    @IBOutlet weak var jobOfferTV: UITextView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func addJobDone(_ sender: Any) {
