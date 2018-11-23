@@ -2,9 +2,8 @@
 //  addJob.swift
 //  Grant
 //
-//  Created by 笹倉 一也 on 2018/10/24.
-//  Copyright © 2018年 sasakura.company. All rights reserved.
-//
+
+
 
 import UIKit
 import RealmSwift
@@ -24,11 +23,35 @@ class addJob: UIViewController {
     }
     
     @IBAction func addJobDone(_ sender: Any) {
+        
+        let newJob = JobOffer()
+        
+        newJob.title = jobOfferTitle.text!
+        newJob.price = priceTF.text!
+        newJob.place = placeLabel.text!
+        newJob.content = jobOfferTV.text!
+    
+        do{
+            let realm = try Realm()
+            try realm.write({ () -> Void in
+                realm.add(newJob)
+                print("成功！！")
+                
+            })
+        }catch{
+            print("失敗！！！")
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+        
+        
+        
     }
     
     @IBAction func cancelBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
         
     }
+    
     
 }
