@@ -12,7 +12,7 @@
         <!--お仕事中-->
         <scene sceneID="E55-6Y-JfN">
             <objects>
-                <viewController id="9fn-HR-LXd" customClass="working" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9fn-HR-LXd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yui-j1-Y5I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,9 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IyC-rV-tl2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IyC-rV-tl2">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="2Pr-m5-V1t">
@@ -82,9 +81,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NmV-rm-l5y" id="Dtd-Gs-uvu"/>
+                                    <outlet property="delegate" destination="NmV-rm-l5y" id="2Yx-7x-uj4"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IyC-rV-tl2" firstAttribute="bottom" secondItem="Qms-34-EXY" secondAttribute="bottom" id="DkQ-E2-BFu"/>
+                            <constraint firstItem="IyC-rV-tl2" firstAttribute="trailing" secondItem="Qms-34-EXY" secondAttribute="trailing" id="Eqv-30-qhh"/>
+                            <constraint firstItem="IyC-rV-tl2" firstAttribute="leading" secondItem="Qms-34-EXY" secondAttribute="leading" id="kmU-Tt-T3a"/>
+                            <constraint firstItem="IyC-rV-tl2" firstAttribute="top" secondItem="Qms-34-EXY" secondAttribute="top" id="lrd-GV-nEY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Qms-34-EXY"/>
                     </view>
                     <navigationItem key="navigationItem" title="お仕事依頼一覧" id="ahN-vq-0jS">
@@ -110,57 +119,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="お仕事のタイトル" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U4U-M4-7lK">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="犬の散歩　話し相手になってほしい" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U4U-M4-7lK">
                                 <rect key="frame" x="16" y="115" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="報酬：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBJ-YW-6ec">
-                                <rect key="frame" x="16" y="188" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物々交換：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBJ-YW-6ec">
+                                <rect key="frame" x="16" y="188" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="お金以外で記入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kyi-Yq-k5U">
-                                <rect key="frame" x="94" y="184" width="265" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="みかん10個" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kyi-Yq-k5U">
+                                <rect key="frame" x="111" y="184" width="248" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="prB-1v-S3I">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="prB-1v-S3I">
                                 <rect key="frame" x="16" y="325" width="343" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="214" id="Fsa-n7-DcV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="場所：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgG-x4-A2m">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="場所：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgG-x4-A2m">
                                 <rect key="frame" x="16" y="235" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="お仕事内容：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79u-3v-Fms">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お仕事内容：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79u-3v-Fms">
                                 <rect key="frame" x="16" y="286" width="104" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GmF-VT-wd3">
-                                <rect key="frame" x="94" y="231" width="265" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="滋賀県守山市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GmF-VT-wd3">
+                                <rect key="frame" x="111" y="231" width="248" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AgG-x4-A2m" firstAttribute="leading" secondItem="ofI-M9-EdL" secondAttribute="leading" constant="16" id="1lP-yY-7hD"/>
+                            <constraint firstItem="Kyi-Yq-k5U" firstAttribute="leading" secondItem="sBJ-YW-6ec" secondAttribute="trailing" constant="8" id="4Ym-uP-aLR"/>
+                            <constraint firstItem="prB-1v-S3I" firstAttribute="top" secondItem="79u-3v-Fms" secondAttribute="bottom" constant="18" id="5DY-er-ba2"/>
+                            <constraint firstItem="U4U-M4-7lK" firstAttribute="top" secondItem="ofI-M9-EdL" secondAttribute="top" constant="51" id="7Ka-LW-uIf"/>
+                            <constraint firstItem="AgG-x4-A2m" firstAttribute="top" secondItem="sBJ-YW-6ec" secondAttribute="bottom" constant="26" id="GX9-L8-b06"/>
+                            <constraint firstItem="GmF-VT-wd3" firstAttribute="leading" secondItem="AgG-x4-A2m" secondAttribute="trailing" constant="43" id="Lxx-FP-oj8"/>
+                            <constraint firstItem="sBJ-YW-6ec" firstAttribute="top" secondItem="U4U-M4-7lK" secondAttribute="bottom" constant="43" id="O52-7K-sPj"/>
+                            <constraint firstItem="sBJ-YW-6ec" firstAttribute="leading" secondItem="ofI-M9-EdL" secondAttribute="leading" constant="16" id="aRZ-4p-pcH"/>
+                            <constraint firstItem="GmF-VT-wd3" firstAttribute="top" secondItem="Kyi-Yq-k5U" secondAttribute="bottom" constant="17" id="bTg-ID-ld9"/>
+                            <constraint firstItem="Kyi-Yq-k5U" firstAttribute="top" secondItem="U4U-M4-7lK" secondAttribute="bottom" constant="39" id="cFN-0Z-Sgb"/>
+                            <constraint firstItem="79u-3v-Fms" firstAttribute="top" secondItem="GmF-VT-wd3" secondAttribute="bottom" constant="25" id="dPR-LF-9Eo"/>
+                            <constraint firstItem="prB-1v-S3I" firstAttribute="leading" secondItem="ofI-M9-EdL" secondAttribute="leading" constant="16" id="huD-SM-nCO"/>
+                            <constraint firstItem="ofI-M9-EdL" firstAttribute="trailing" secondItem="GmF-VT-wd3" secondAttribute="trailing" constant="16" id="pMR-F0-RA0"/>
+                            <constraint firstItem="U4U-M4-7lK" firstAttribute="leading" secondItem="ofI-M9-EdL" secondAttribute="leading" constant="16" id="poL-Xy-3NS"/>
+                            <constraint firstItem="ofI-M9-EdL" firstAttribute="trailing" secondItem="U4U-M4-7lK" secondAttribute="trailing" constant="16" id="px0-6o-E6n"/>
+                            <constraint firstItem="79u-3v-Fms" firstAttribute="leading" secondItem="ofI-M9-EdL" secondAttribute="leading" constant="16" id="unJ-hg-ILH"/>
+                            <constraint firstItem="ofI-M9-EdL" firstAttribute="trailing" secondItem="Kyi-Yq-k5U" secondAttribute="trailing" constant="16" id="wKb-Il-kKq"/>
+                            <constraint firstItem="ofI-M9-EdL" firstAttribute="trailing" secondItem="prB-1v-S3I" secondAttribute="trailing" constant="16" id="xnq-mv-djU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ofI-M9-EdL"/>
                     </view>
                     <navigationItem key="navigationItem" title="お仕事依頼" id="zue-5x-NRm">
@@ -271,8 +296,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="yx1-hp-JBG" kind="relationship" relationship="viewControllers" id="YK9-cT-Do9"/>
-                        <segue destination="99Z-bf-REl" kind="relationship" relationship="viewControllers" id="LH9-go-Nvu"/>
                         <segue destination="1k4-J6-zwU" kind="relationship" relationship="viewControllers" id="E8I-dX-npX"/>
+                        <segue destination="99Z-bf-REl" kind="relationship" relationship="viewControllers" id="LH9-go-Nvu"/>
                         <segue destination="uRU-aH-4mD" kind="relationship" relationship="viewControllers" id="c2V-gk-TKh"/>
                     </connections>
                 </tabBarController>
@@ -429,7 +454,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="このアプリは、65歳以上限定のお仕事マッチングアプリです。報酬はお金以外での報酬となります。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xEN-nt-M34">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="このアプリは、65歳以上限定のお手伝いマッチングアプリです。人生１００年時代だからこそ、この世から暇な人をなくしたい。そんな思いから作りました。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xEN-nt-M34">
                                 <rect key="frame" x="16" y="88" width="343" height="507"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

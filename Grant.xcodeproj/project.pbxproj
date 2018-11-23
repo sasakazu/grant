@@ -93,6 +93,13 @@
 			path = database;
 			sourceTree = "<group>";
 		};
+		7327CF3A21A800B600F16338 /* nowWorking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = nowWorking;
+			sourceTree = "<group>";
+		};
 		7330DDF821807FB500F86D72 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,12 +121,12 @@
 			path = jobOffer;
 			sourceTree = "<group>";
 		};
-		7330DE062180835D00F86D72 /* search */ = {
+		7330DE062180835D00F86D72 /* searchJob */ = {
 			isa = PBXGroup;
 			children = (
 				7330DDFF2180812D00F86D72 /* searchJob.swift */,
 			);
-			path = search;
+			path = searchJob;
 			sourceTree = "<group>";
 		};
 		7392103E217F119A00DFC13C = {
@@ -147,8 +154,9 @@
 				7392104C217F119A00DFC13C /* ViewController.swift */,
 				7392104E217F119A00DFC13C /* Main.storyboard */,
 				7327CF3921A6659100F16338 /* database */,
+				7327CF3A21A800B600F16338 /* nowWorking */,
 				7330DE052180833300F86D72 /* jobOffer */,
-				7330DE062180835D00F86D72 /* search */,
+				7330DE062180835D00F86D72 /* searchJob */,
 				7327CF2E219EC46700F16338 /* more */,
 				7330DDF821807FB500F86D72 /* images */,
 				73921051217F119B00DFC13C /* Assets.xcassets */,

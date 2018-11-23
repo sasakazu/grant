@@ -15,7 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
      
         
-    
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         
         
     }

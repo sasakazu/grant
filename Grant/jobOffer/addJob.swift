@@ -63,7 +63,7 @@ class addJob: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         
         newJob.title = jobOfferTitle.text!
         newJob.price = priceTF.text!
-        newJob.place = placeLabel.text!
+        newJob.place = textFiled.text!
         newJob.content = jobOfferTV.text!
     
         do{
