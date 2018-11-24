@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7327CF2D219EC45F00F16338 /* more.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7327CF2C219EC45F00F16338 /* more.swift */; };
 		7327CF3821A6658100F16338 /* object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7327CF3721A6658100F16338 /* object.swift */; };
+		7327CF3C21A8033F00F16338 /* searchJobDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7327CF3B21A8033F00F16338 /* searchJobDetail.swift */; };
+		7327CF3E21A8037D00F16338 /* nowWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7327CF3D21A8037D00F16338 /* nowWorking.swift */; };
+		7327CF4021A803B800F16338 /* nowWorkingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7327CF3F21A803B800F16338 /* nowWorkingDetail.swift */; };
+		7327CF4221A904D000F16338 /* jobOfferDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7327CF4121A904D000F16338 /* jobOfferDetail.swift */; };
 		7330DDFB21807FC800F86D72 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDF921807FC800F86D72 /* search.png */; };
 		7330DDFC21807FC800F86D72 /* acount.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDFA21807FC800F86D72 /* acount.png */; };
 		7330DDFE21807FD000F86D72 /* job.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDFD21807FD000F86D72 /* job.png */; };
@@ -28,6 +32,10 @@
 /* Begin PBXFileReference section */
 		7327CF2C219EC45F00F16338 /* more.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = more.swift; sourceTree = "<group>"; };
 		7327CF3721A6658100F16338 /* object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = object.swift; sourceTree = "<group>"; };
+		7327CF3B21A8033F00F16338 /* searchJobDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchJobDetail.swift; sourceTree = "<group>"; };
+		7327CF3D21A8037D00F16338 /* nowWorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nowWorking.swift; sourceTree = "<group>"; };
+		7327CF3F21A803B800F16338 /* nowWorkingDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nowWorkingDetail.swift; sourceTree = "<group>"; };
+		7327CF4121A904D000F16338 /* jobOfferDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobOfferDetail.swift; sourceTree = "<group>"; };
 		7330DDF921807FC800F86D72 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		7330DDFA21807FC800F86D72 /* acount.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acount.png; sourceTree = "<group>"; };
 		7330DDFD21807FD000F86D72 /* job.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = job.png; sourceTree = "<group>"; };
@@ -96,6 +104,8 @@
 		7327CF3A21A800B600F16338 /* nowWorking */ = {
 			isa = PBXGroup;
 			children = (
+				7327CF3D21A8037D00F16338 /* nowWorking.swift */,
+				7327CF3F21A803B800F16338 /* nowWorkingDetail.swift */,
 			);
 			path = nowWorking;
 			sourceTree = "<group>";
@@ -117,6 +127,7 @@
 			children = (
 				7330DE03218081B400F86D72 /* working.swift */,
 				7330DE012180815100F86D72 /* addJob.swift */,
+				7327CF4121A904D000F16338 /* jobOfferDetail.swift */,
 			);
 			path = jobOffer;
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 		7330DE062180835D00F86D72 /* searchJob */ = {
 			isa = PBXGroup;
 			children = (
+				7327CF3B21A8033F00F16338 /* searchJobDetail.swift */,
 				7330DDFF2180812D00F86D72 /* searchJob.swift */,
 			);
 			path = searchJob;
@@ -297,7 +309,11 @@
 				7330DE002180812D00F86D72 /* searchJob.swift in Sources */,
 				7392104D217F119A00DFC13C /* ViewController.swift in Sources */,
 				7392104B217F119A00DFC13C /* AppDelegate.swift in Sources */,
+				7327CF3C21A8033F00F16338 /* searchJobDetail.swift in Sources */,
+				7327CF3E21A8037D00F16338 /* nowWorking.swift in Sources */,
+				7327CF4221A904D000F16338 /* jobOfferDetail.swift in Sources */,
 				7327CF3821A6658100F16338 /* object.swift in Sources */,
+				7327CF4021A803B800F16338 /* nowWorkingDetail.swift in Sources */,
 				7330DE04218081B400F86D72 /* working.swift in Sources */,
 				7330DE022180815100F86D72 /* addJob.swift in Sources */,
 			);

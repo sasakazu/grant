@@ -11,7 +11,13 @@ import RealmSwift
 
 class working: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-     var jobOfferItem: Results<JobOffer>!
+    var jobOfferItem: Results<JobOffer>!
+    
+    var jobOfferTitle:String = ""
+    var jobOfferPrice:String = ""
+    var jobOfferPlace:String = ""
+    var jobOfferContent:String = ""
+    
     
     @IBOutlet weak var jobOfferTable: UITableView!
     
@@ -67,7 +73,38 @@ class working: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let object = jobOfferItem[indexPath.row]
+        
+        jobOfferTitle = object.title
+        jobOfferPrice = object.price
+        jobOfferPlace = object.place
+        jobOfferContent = object.content
+        
+        performSegue(withIdentifier: "jobOfferDetail",sender: nil)
+        
+    }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "jobOfferDetail") {
+            
+            
+            let secondVC: jobOfferDetail = (segue.destination as? jobOfferDetail)!
+            
+            
+            secondVC.jobDetailTitle = jobOfferTitle
+            secondVC.jobDetailPrice = jobOfferPrice
+            secondVC.jobDetailinPlace = jobOfferPlace
+            secondVC.jobDetailContent = jobOfferContent
+        
+        
+            }
+    
+
+    }
+
 
 
 }

@@ -12,14 +12,13 @@
         <!--お仕事中-->
         <scene sceneID="E55-6Y-JfN">
             <objects>
-                <viewController id="9fn-HR-LXd" sceneMemberID="viewController">
+                <viewController id="9fn-HR-LXd" customClass="nowWorking" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yui-j1-Y5I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i7P-a1-ylF">
-                                <rect key="frame" x="0.0" y="64" width="375" height="544"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i7P-a1-ylF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="96f-BO-Ywv">
@@ -34,6 +33,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i7P-a1-ylF" firstAttribute="bottom" secondItem="mWD-AR-TnN" secondAttribute="bottom" id="2eI-1M-o22"/>
+                            <constraint firstItem="i7P-a1-ylF" firstAttribute="trailing" secondItem="mWD-AR-TnN" secondAttribute="trailing" id="PKN-J4-V5X"/>
+                            <constraint firstItem="i7P-a1-ylF" firstAttribute="top" secondItem="mWD-AR-TnN" secondAttribute="top" id="S3M-Me-Hyn"/>
+                            <constraint firstItem="i7P-a1-ylF" firstAttribute="leading" secondItem="mWD-AR-TnN" secondAttribute="leading" id="lRv-g0-4mY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mWD-AR-TnN"/>
                     </view>
                     <navigationItem key="navigationItem" title="お仕事中" id="KcH-41-MaP"/>
@@ -43,12 +48,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v28-dD-tzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801" y="36"/>
+            <point key="canvasLocation" x="1800.8" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--Now Working Detail-->
         <scene sceneID="Gk9-uO-svG">
             <objects>
-                <viewController id="cCc-4I-UZn" sceneMemberID="viewController">
+                <viewController id="cCc-4I-UZn" customClass="nowWorkingDetail" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4nh-Et-Xqy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +65,7 @@
             </objects>
             <point key="canvasLocation" x="2577" y="36"/>
         </scene>
-        <!--お仕事依頼一覧-->
+        <!--お手伝い依頼一覧-->
         <scene sceneID="XIr-Lc-MkS">
             <objects>
                 <viewController id="NmV-rm-l5y" customClass="working" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +101,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qms-34-EXY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="お仕事依頼一覧" id="ahN-vq-0jS">
+                    <navigationItem key="navigationItem" title="お手伝い依頼一覧" id="ahN-vq-0jS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="rbU-XC-a7r"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6oj-ry-SGt">
                             <connections>
                                 <segue destination="QVC-Xd-NyF" kind="show" id="EWg-23-DrR"/>
@@ -105,13 +111,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="jobOfferTable" destination="IyC-rV-tl2" id="gng-In-1kX"/>
+                        <segue destination="QNl-RP-u9D" kind="show" identifier="jobOfferDetail" id="y5j-NC-Tdp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9g-F1-IwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800.8" y="783.95802098950526"/>
         </scene>
-        <!--お仕事依頼-->
+        <!--お手伝い依頼-->
         <scene sceneID="kUQ-vl-TEd">
             <objects>
                 <viewController id="QVC-Xd-NyF" customClass="addJob" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,8 +159,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お仕事内容：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79u-3v-Fms">
-                                <rect key="frame" x="16" y="286" width="104" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お手伝い内容：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79u-3v-Fms">
+                                <rect key="frame" x="16" y="286" width="121.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -188,7 +195,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ofI-M9-EdL"/>
                     </view>
-                    <navigationItem key="navigationItem" title="お仕事依頼" id="zue-5x-NRm">
+                    <navigationItem key="navigationItem" title="お手伝い依頼" id="zue-5x-NRm">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PxO-0U-nrn">
                             <connections>
                                 <action selector="cancelBtn:" destination="QVC-Xd-NyF" id="DhL-za-suC"/>
@@ -211,7 +218,108 @@
             </objects>
             <point key="canvasLocation" x="2576.8000000000002" y="783.95802098950526"/>
         </scene>
-        <!--仕事を探す-->
+        <!--お手伝い詳細-->
+        <scene sceneID="Ghm-sT-MYx">
+            <objects>
+                <viewController id="QNl-RP-u9D" customClass="jobOfferDetail" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4SA-hJ-dya">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お仕事タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Deh-wF-hoF">
+                                <rect key="frame" x="16" y="86" width="343" height="27.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物々交換：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2w-JZ-ETc">
+                                <rect key="frame" x="16" y="195" width="97" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="場所：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJP-9X-vmQ">
+                                <rect key="frame" x="54" y="247" width="59" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="XbV-dv-bia"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お手伝い内容：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nH-P3-hzK">
+                                <rect key="frame" x="16" y="314" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物々交換品" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5v-Bu-GcK">
+                                <rect key="frame" x="121" y="195" width="238" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="3np-jf-ZnP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="場所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGj-Z8-WzD">
+                                <rect key="frame" x="121" y="247" width="238" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="MXu-3b-xpZ"/>
+                                    <constraint firstAttribute="height" constant="21" id="VV3-Qu-m17"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jjI-QU-7Cp">
+                                <rect key="frame" x="16" y="353" width="343" height="250"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="3kW-Ms-jri"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v5v-Bu-GcK" firstAttribute="leading" secondItem="c2w-JZ-ETc" secondAttribute="trailing" constant="8" id="0vP-LT-qHw"/>
+                            <constraint firstItem="Rvh-h4-wTJ" firstAttribute="trailing" secondItem="v5v-Bu-GcK" secondAttribute="trailing" constant="16" id="4pQ-ta-wyI"/>
+                            <constraint firstItem="Rvh-h4-wTJ" firstAttribute="bottom" secondItem="jjI-QU-7Cp" secondAttribute="bottom" constant="15" id="5xv-7t-Hlx"/>
+                            <constraint firstItem="cGj-Z8-WzD" firstAttribute="leading" secondItem="BJP-9X-vmQ" secondAttribute="trailing" constant="8" id="9Lo-2K-aWe"/>
+                            <constraint firstItem="c2w-JZ-ETc" firstAttribute="top" secondItem="Deh-wF-hoF" secondAttribute="bottom" constant="81.5" id="AmT-xs-c2V"/>
+                            <constraint firstItem="5nH-P3-hzK" firstAttribute="top" secondItem="BJP-9X-vmQ" secondAttribute="bottom" constant="44" id="DvQ-bg-Sla"/>
+                            <constraint firstItem="BJP-9X-vmQ" firstAttribute="leading" secondItem="Rvh-h4-wTJ" secondAttribute="leading" constant="54" id="HN6-Ot-zhM"/>
+                            <constraint firstItem="jjI-QU-7Cp" firstAttribute="leading" secondItem="Rvh-h4-wTJ" secondAttribute="leading" constant="16" id="L2x-cP-cmY"/>
+                            <constraint firstItem="c2w-JZ-ETc" firstAttribute="leading" secondItem="Rvh-h4-wTJ" secondAttribute="leading" constant="16" id="NMw-UC-Nm1"/>
+                            <constraint firstItem="v5v-Bu-GcK" firstAttribute="top" secondItem="Deh-wF-hoF" secondAttribute="bottom" constant="81.5" id="QbL-qb-API"/>
+                            <constraint firstItem="jjI-QU-7Cp" firstAttribute="top" secondItem="5nH-P3-hzK" secondAttribute="bottom" constant="18" id="Qoi-WF-G2N"/>
+                            <constraint firstItem="Rvh-h4-wTJ" firstAttribute="trailing" secondItem="Deh-wF-hoF" secondAttribute="trailing" constant="16" id="ZW4-MN-avy"/>
+                            <constraint firstItem="BJP-9X-vmQ" firstAttribute="top" secondItem="c2w-JZ-ETc" secondAttribute="bottom" constant="29" id="g6U-8g-iWd"/>
+                            <constraint firstItem="Deh-wF-hoF" firstAttribute="leading" secondItem="Rvh-h4-wTJ" secondAttribute="leading" constant="16" id="hv0-b7-hvt"/>
+                            <constraint firstItem="Deh-wF-hoF" firstAttribute="top" secondItem="Rvh-h4-wTJ" secondAttribute="top" constant="22" id="lSg-6v-fZF"/>
+                            <constraint firstItem="5nH-P3-hzK" firstAttribute="leading" secondItem="Rvh-h4-wTJ" secondAttribute="leading" constant="16" id="ndw-zo-eEk"/>
+                            <constraint firstItem="Rvh-h4-wTJ" firstAttribute="trailing" secondItem="jjI-QU-7Cp" secondAttribute="trailing" constant="16" id="pAQ-78-ckx"/>
+                            <constraint firstItem="Rvh-h4-wTJ" firstAttribute="trailing" secondItem="cGj-Z8-WzD" secondAttribute="trailing" constant="16" id="rNq-P3-NhD"/>
+                            <constraint firstItem="cGj-Z8-WzD" firstAttribute="top" secondItem="v5v-Bu-GcK" secondAttribute="bottom" constant="31" id="vBP-hA-xm2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rvh-h4-wTJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="お手伝い詳細" id="Ioh-iG-KoI"/>
+                    <connections>
+                        <outlet property="jobDetailLabel" destination="Deh-wF-hoF" id="Gma-HK-ZoT"/>
+                        <outlet property="jobDetailPlace" destination="cGj-Z8-WzD" id="ybo-yQ-aBq"/>
+                        <outlet property="jobDetailPriceLabel" destination="v5v-Bu-GcK" id="ZO3-3a-84z"/>
+                        <outlet property="jobDetailTextView" destination="jjI-QU-7Cp" id="jon-7a-iU1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VlJ-Ob-w79" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3309.5999999999999" y="783.95802098950526"/>
+        </scene>
+        <!--お手伝いを探す-->
         <scene sceneID="2CH-Xh-qsj">
             <objects>
                 <viewController id="edm-mH-GRa" customClass="searchJob" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
@@ -244,6 +352,9 @@
                                     <segment title="カテゴリで探す"/>
                                     <segment title="場所で探す"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentTapped:" destination="edm-mH-GRa" eventType="valueChanged" id="ePd-uY-Pye"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -261,29 +372,64 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="beY-6d-gTL"/>
                     </view>
-                    <navigationItem key="navigationItem" title="仕事を探す" id="pQx-ih-KZs"/>
+                    <navigationItem key="navigationItem" title="お手伝いを探す" id="pQx-ih-KZs"/>
                     <connections>
+                        <outlet property="segmentControl" destination="UJ0-Rr-dwE" id="UUx-i4-Hon"/>
+                        <outlet property="segmentView1" destination="gQh-3A-fJl" id="USf-0I-4pe"/>
+                        <outlet property="segmentView2" destination="pF5-7l-uWf" id="Bgm-eJ-nyc"/>
                         <segue destination="XJz-zh-FGj" kind="show" id="RZf-I0-hiG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbK-O2-frM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="gQh-3A-fJl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8S2-HS-PHr">
+                            <rect key="frame" x="0.0" y="161" width="375" height="266"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <prototypes>
+                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="N56-Qj-NcR">
+                                    <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N56-Qj-NcR" id="SxY-D2-1tW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </tableViewCellContentView>
+                                </tableViewCell>
+                            </prototypes>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="Azo-k6-V1b"/>
+                </view>
+                <view contentMode="scaleToFill" id="pF5-7l-uWf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="nzV-y7-bEw"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1800.8" y="-644.52773613193403"/>
         </scene>
-        <!--Add Job-->
+        <!--お手伝い詳細-->
         <scene sceneID="rFd-Pj-Ibr">
             <objects>
-                <viewController id="XJz-zh-FGj" customClass="addJob" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XJz-zh-FGj" customClass="searchJobDetail" customModule="Grant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z4e-Yy-r4w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="E4G-pD-hAw"/>
                     </view>
+                    <navigationItem key="navigationItem" title="お手伝い詳細" id="cbM-3M-9H0">
+                        <barButtonItem key="rightBarButtonItem" title="申し込む" id="aun-O1-DJx"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUU-xg-x8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="-643"/>
+            <point key="canvasLocation" x="2446" y="-643"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="joh-fP-bt7">
@@ -362,11 +508,11 @@
             </objects>
             <point key="canvasLocation" x="69.599999999999994" y="481.70914542728639"/>
         </scene>
-        <!--お仕事依頼-->
+        <!--お手伝い依頼-->
         <scene sceneID="h2N-lp-HK5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1k4-J6-zwU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="お仕事依頼" image="hummer.png" id="Vgu-VU-iBl"/>
+                    <tabBarItem key="tabBarItem" title="お手伝い依頼" image="hummer.png" id="Vgu-VU-iBl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="74A-QX-yv5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -446,7 +592,7 @@
             </objects>
             <point key="canvasLocation" x="70" y="1184"/>
         </scene>
-        <!--View Controller-->
+        <!--Grantとは？-->
         <scene sceneID="vQG-R5-3yz">
             <objects>
                 <viewController id="mIH-aE-cyf" sceneMemberID="viewController">
@@ -454,17 +600,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="このアプリは、65歳以上限定のお手伝いマッチングアプリです。人生１００年時代だからこそ、この世から暇な人をなくしたい。そんな思いから作りました。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xEN-nt-M34">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="このアプリは、65歳以上限定のお手伝いマッチングアプリです。人生１００年時代だから、暇な人をなくしたい。そんな思いから作りました。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xEN-nt-M34">
                                 <rect key="frame" x="16" y="88" width="343" height="507"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vXU-pA-Ycy" firstAttribute="bottom" secondItem="xEN-nt-M34" secondAttribute="bottom" constant="23" id="166-WS-5dE"/>
+                            <constraint firstItem="xEN-nt-M34" firstAttribute="top" secondItem="vXU-pA-Ycy" secondAttribute="top" constant="24" id="dpl-eS-coO"/>
+                            <constraint firstItem="xEN-nt-M34" firstAttribute="leading" secondItem="vXU-pA-Ycy" secondAttribute="leading" constant="16" id="pN6-ee-oyf"/>
+                            <constraint firstItem="vXU-pA-Ycy" firstAttribute="trailing" secondItem="xEN-nt-M34" secondAttribute="trailing" constant="16" id="yip-dS-BBe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vXU-pA-Ycy"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Grantとは？" id="sS9-8L-mKt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bN6-Zs-5Ai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,13 +10,46 @@ import UIKit
 
 class searchJob: UIViewController {
 
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    
+    @IBOutlet var segmentView1: UIView!
+    @IBOutlet var segmentView2: UIView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
+    func addFirstView() {
+        segmentView2.removeFromSuperview()
+        self.view.addSubview(segmentView1)
+        
+    }
+    
+    func addSecondView() {
+        segmentView1.removeFromSuperview()
+        self.view.addSubview(segmentView2)
+        
+    }
+    
+    @IBAction func segmentTapped(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        
+        case 0:
+        addFirstView()
+        case 1:
+        addSecondView()
+        default:
+        addFirstView()
+        
+        }
+        
+    }
+    
 
 
 }
