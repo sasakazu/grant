@@ -30,43 +30,43 @@ class searchJob: UIViewController
         super.viewDidLoad()
 
 //        addZeroView()
-        self.view.addSubview(segmentView0)
+//        self.view.addSubview(segmentView0)
         
     }
     
-    func addZeroView() {
-        segmentView1.removeFromSuperview()
-        self.view.addSubview(segmentView0)
-        
-    }
-    
-    
-    func addFirstView() {
-        segmentView2.removeFromSuperview()
-        self.view.addSubview(segmentView1)
-        
-    }
-    
-    func addSecondView() {
-        segmentView0.removeFromSuperview()
-        self.view.addSubview(segmentView2)
-        
-    }
+//    func addZeroView() {
+//        segmentView1.removeFromSuperview()
+//        self.view.addSubview(segmentView0)
+//
+//    }
+//
+//
+//    func addFirstView() {
+//        segmentView2.removeFromSuperview()
+//        self.view.addSubview(segmentView1)
+//
+//    }
+//
+//    func addSecondView() {
+//        segmentView0.removeFromSuperview()
+//        self.view.addSubview(segmentView2)
+//
+//    }
     
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
         
-        switch sender.selectedSegmentIndex {
+//        switch sender.selectedSegmentIndex {
         
-        case 0:
-            addZeroView()
-        case 1:
-            addFirstView()
-        case 2:
-            addSecondView()
-        default:
-            addZeroView()
+//        case 0:
+////            addZeroView()
+//        case 1:
+////            addFirstView()
+//        case 2:
+////            addSecondView()
+//        default:
+////            addZeroView()
         
-        }
+//        }
         
     }
 

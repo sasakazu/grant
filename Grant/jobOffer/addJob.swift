@@ -14,13 +14,12 @@ class addJob: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var jobOfferTitle: UITextField!
     @IBOutlet weak var priceTF: UITextField!
-    @IBOutlet weak var placeLabel: UILabel!
+    @IBOutlet weak var categoryTF: UITextField!
+    
     @IBOutlet weak var jobOfferTV: UITextView!
     @IBOutlet weak var textFiled: UITextField!
     
-    
-    @IBOutlet weak var placePicker: UIPickerView!
-    
+    let categoryList = ["身の回り","細かな作業","お掃除","わんちゃんのこと","体力仕事","外作"]
     
     let placeList = [
         "北海道","青森県","岩手県","宮城県","秋県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"
@@ -65,6 +64,7 @@ class addJob: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         newJob.price = priceTF.text!
         newJob.place = textFiled.text!
         newJob.content = jobOfferTV.text!
+        newJob.category = categoryTF.text!
     
         do{
             let realm = try Realm()
@@ -92,22 +92,28 @@ class addJob: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView,
                     numberOfRowsInComponent component: Int) -> Int {
         return placeList.count
+       
     }
+    
     
     func pickerView(_ pickerView: UIPickerView,
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
         
-        return placeList[row]
+        return placeList[row] 
+        
     }
     
     
     func pickerView(_ pickerView: UIPickerView,
                     didSelectRow row: Int,
                     inComponent component: Int) {
+        
         textFiled.text = placeList[row]
         
     }
+    
+    
     
     @objc func donePressed() {
         view.endEditing(true)

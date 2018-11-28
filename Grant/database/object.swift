@@ -13,6 +13,7 @@ import RealmSwift
 class JobOffer: Object {
     
     @objc dynamic var title = ""
+    @objc dynamic var category = ""
     @objc dynamic var price = ""
     @objc dynamic var place = ""
     @objc dynamic var content = ""

@@ -17,7 +17,7 @@ class working: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var jobOfferPrice:String = ""
     var jobOfferPlace:String = ""
     var jobOfferContent:String = ""
-    
+    var jobOfferCategory:String = ""
     
     @IBOutlet weak var jobOfferTable: UITableView!
     
@@ -81,6 +81,7 @@ class working: UIViewController, UITableViewDelegate, UITableViewDataSource {
         jobOfferPrice = object.price
         jobOfferPlace = object.place
         jobOfferContent = object.content
+        jobOfferCategory = object.category
         
         performSegue(withIdentifier: "jobOfferDetail",sender: nil)
         
@@ -98,7 +99,8 @@ class working: UIViewController, UITableViewDelegate, UITableViewDataSource {
             secondVC.jobDetailPrice = jobOfferPrice
             secondVC.jobDetailinPlace = jobOfferPlace
             secondVC.jobDetailContent = jobOfferContent
-        
+            secondVC.jobDetailCategory = jobOfferCategory
+            
         
             }
     

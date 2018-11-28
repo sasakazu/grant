@@ -15,10 +15,11 @@ class jobOfferDetail: UIViewController {
     var jobDetailPrice:String = ""
     var jobDetailinPlace:String = ""
     var jobDetailContent:String = ""
-    
+    var jobDetailCategory:String = ""
     
     
     @IBOutlet weak var jobDetailLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var jobDetailPriceLabel: UILabel!
     @IBOutlet weak var jobDetailPlace: UILabel!
     @IBOutlet weak var jobDetailTextView: UITextView!
@@ -31,7 +32,8 @@ class jobOfferDetail: UIViewController {
         jobDetailPriceLabel.text = jobDetailPrice
         jobDetailPlace.text = jobDetailinPlace
         jobDetailTextView.text = jobDetailContent
-
+        categoryLabel.text = jobDetailCategory
+        
     }
     
 
