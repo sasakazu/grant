@@ -409,6 +409,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="segmentControl" destination="UJ0-Rr-dwE" id="UUx-i4-Hon"/>
+                        <outlet property="tableView1" destination="LLl-gp-cge" id="5Xc-d1-1Lh"/>
                         <segue destination="XJz-zh-FGj" kind="show" id="RZf-I0-hiG"/>
                     </connections>
                 </viewController>

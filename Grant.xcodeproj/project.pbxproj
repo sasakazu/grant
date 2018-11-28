@@ -27,6 +27,7 @@
 		73921052217F119B00DFC13C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73921051217F119B00DFC13C /* Assets.xcassets */; };
 		73921055217F119B00DFC13C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73921053217F119B00DFC13C /* LaunchScreen.storyboard */; };
 		73C9A3B121AE875C00E643A2 /* 虫眼鏡の無料アイコン10.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C9A3B021AE875C00E643A2 /* 虫眼鏡の無料アイコン10.png */; };
+		73C9A3B321AEA1FD00E643A2 /* grant.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C9A3B221AEA1FD00E643A2 /* grant.png */; };
 		7929EA26BCC470F4AD64182F /* Pods_Grant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D7881F9A97154405721D7 /* Pods_Grant.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		73921054217F119B00DFC13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73921056217F119B00DFC13C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73C9A3B021AE875C00E643A2 /* 虫眼鏡の無料アイコン10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "虫眼鏡の無料アイコン10.png"; path = "../../../../image/虫眼鏡の無料アイコン10.png"; sourceTree = "<group>"; };
+		73C9A3B221AEA1FD00E643A2 /* grant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grant.png; path = ../../../../image/grant.png; sourceTree = "<group>"; };
 		BF7B8A1A4EB96201679C23E8 /* Pods-Grant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grant.release.xcconfig"; path = "Target Support Files/Pods-Grant/Pods-Grant.release.xcconfig"; sourceTree = "<group>"; };
 		CDAEF1C8FE09E903F18D0457 /* Pods-Grant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grant.debug.xcconfig"; path = "Target Support Files/Pods-Grant/Pods-Grant.debug.xcconfig"; sourceTree = "<group>"; };
 		D03D7881F9A97154405721D7 /* Pods_Grant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 			children = (
 				7330DDFD21807FD000F86D72 /* job.png */,
 				73C9A3B021AE875C00E643A2 /* 虫眼鏡の無料アイコン10.png */,
+				73C9A3B221AEA1FD00E643A2 /* grant.png */,
 				735C50F2219C3599003D7758 /* grand.png */,
 				735C50F1219C3599003D7758 /* hummer.png */,
 				7330DDFA21807FC800F86D72 /* acount.png */,
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C9A3B321AEA1FD00E643A2 /* grant.png in Resources */,
 				735C50F4219C3599003D7758 /* grand.png in Resources */,
 				73921055217F119B00DFC13C /* LaunchScreen.storyboard in Resources */,
 				73921052217F119B00DFC13C /* Assets.xcassets in Resources */,
